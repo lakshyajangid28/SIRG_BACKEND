@@ -148,7 +148,7 @@ router.post("/add-teaching", (req, res) => {
     !time ||
     !course_instructor ||
     !course_code ||
-    typeof credits !== "number"
+    !credits
   ) {
     return res.status(400).send("All fields are required and must be valid");
   }
